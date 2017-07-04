@@ -1,0 +1,54 @@
+size 1000 1000
+
+output edx10.png
+
+camera 0 0 0 0 0 -3 0 1 0 36.87
+
+maxdepth 1
+
+#HDREnvironmentMap grace_probe.pfm
+
+#focalLength 9
+#apertureSize 128
+#isDepthOfField true
+#DOFSamplingRate 16
+
+#directional 0 1 1 1.0 1.0 1.0
+point 3 7 -13 1.0 1.0 1.0
+#sphereLight 0 6 -14 1 1.0 1.0 1.0 400
+#areaLight 4 5 -12 0 0 1 1 0 0 1.0 1.0 1.0 50
+
+
+#ambient 0.5  0.0  0.0
+diffuse 0 1.0 1.0
+specular 1.0 1.0 1.0
+shininess 100
+
+#reflection 1
+#refraction 1
+#refractionIndex 1.5
+pushTransform
+translate 0 -2 -16
+#rotate 0 1 0 45
+#rotate 0 0 1 30
+rotate 1 0 0 30
+#scale 1.5 1.5 1
+cylinder 0 0 0 1.0 0 0.5 0 0 -0.5 0
+#box 0 0 0 2 2 -2
+#cone 0 0 0 1.0 1.0
+#quad 0 0 0 2 2 0
+popTransform
+
+vertex 1 0 1
+vertex 1 0 -1
+vertex -1 0 -1
+vertex -1 0 1
+
+isGlossy false
+diffuse 1.0 0 1.0
+#refraction 0.0
+reflection 0.0
+translate 0 -3 -17
+scale 5 5 5
+tri 0 1 2 
+tri 2 3 0

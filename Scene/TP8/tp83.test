@@ -1,0 +1,23 @@
+size 640 480
+
+output tp83.png
+
+camera 0 0 8 0 0 0 0 1 0 45
+
+directional 1 1 1 1 1 1
+
+maxverts 3
+vertex -3 -1 1
+vertex 0 -1 1
+vertex -1.5 1 1
+
+diffuse .2 .2 .2
+plane 0 -2 0 0 0 1
+ 
+rotate 0 0 1 45
+
+diffuse .8 0 0
+sphere 1 0 0 1
+
+diffuse 0 .8 0
+tri 0 1 2

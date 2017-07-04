@@ -1,0 +1,17 @@
+size 640 480
+
+output mystere5a.png
+
+camera 0 0 6 0 0 0 0 1 0 55
+
+maxverts 3
+vertex 1 0 0
+vertex 3 0 0
+vertex 2 2 0
+
+ambient 1 0 0
+
+rotate 0 0 1 225
+tri 0 1 2
+sphere 0 -1 0 1
+

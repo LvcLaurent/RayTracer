@@ -1,0 +1,10 @@
+ATTENTION COMPILER AVEC ICPC
+avoir le compilateur intel pour make clean et make.
+
+
+Appel du Parser
+   seul : -c pour le multi thread
+          -a pour l'affichage
+
+	  -[c|a] int : pour le nombre de coeur
+

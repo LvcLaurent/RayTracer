@@ -1,0 +1,11 @@
+size 640 480
+
+output tp72s3.png
+
+camera 0 2 8 0 0 0 0 1 0 45
+
+ambient 0 1 0
+
+
+scale 2.5 0.25 0.25
+sphere 0 0 0 1 

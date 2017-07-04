@@ -1,0 +1,10 @@
+size 640 480
+
+output tp72s4.png
+
+camera 0 2 8 0 0 0 0 1 0 45
+
+ambient 0 1 0
+
+scale 2.5 1 2.5
+sphere 0 0 0 1 

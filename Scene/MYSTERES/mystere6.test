@@ -1,0 +1,29 @@
+size 640 480
+
+output mystere6.png
+
+camera 10 10 8 10 10 0 0 1 0 45
+
+directional 1 1 1 .5 .5 .5
+point 10 10 10 .5 .5 .5 
+
+maxverts 3
+vertex -3 -1 1
+vertex 0 -1 1
+vertex -1.5 1 1
+
+diffuse .4 .4 .4
+specular .4 .4 .4
+plane 0 -2 0 0 0 1
+
+translate 10 10 2 
+rotate 0 0 1 45
+scale .5 1 2
+
+diffuse .8 0 0
+specular 0 0 0
+sphere 1 0 0 1
+
+diffuse 0 .8 0
+specular 0 0 0
+tri 0 1 2

@@ -1,0 +1,56 @@
+<project name="projetsynthese" default="build">
+       <!-- A ADAPTER POUR CHAQUE PROJET DANS LE FICHIER project.properties -->
+       <!-- <property name="src" value="src" />
+       <property name="main.class" value="Main" />
+       <property name="jarname" value="raytracer" /> -->
+       <property file="project.properties"/>
+       <!-- LE RESTE DOIT ETRE BON -->
+       <property name="build" value="build" />
+       <property name="project.java.version" value="1.8"/>
+       <property name="encoding" value="UTF-8"/>
+
+       <target name="prepare" depends="clean"
+	       description="Cree les repertoires et initialise certaines valeurs">
+         <!-- Create the time stamp -->
+         <tstamp/>
+         <mkdir dir="${build}" />
+       </target>
+
+  <path id="myPath">
+          <fileset dir="lib" erroronmissingdir="false">
+              <include name="*.jar" />
+          </fileset>
+          <pathelement location="${build}"/>
+  </path>
+
+  <available file="lib" type="dir" property="lib.present"/>
+
+  <target name="build" description="Compile les fichiers Java et cree un fichier jar" 
+	  depends="prepare">
+    <javac
+        includeantruntime="true"
+        srcdir="${src}"
+        destdir="${build}"
+	    source="${project.java.version}"
+        debug="true"
+      >    
+         <classpath refid="myPath"/>
+    </javac>
+    <jar destfile="${jarname}.jar" basedir="${build}">                        
+        <manifest>
+            <attribute name="Built-By" value="L3 Magic Script"/>
+            <attribute name="Main-Class" value="${main.class}"/>
+        </manifest>
+        <zipgroupfileset dir="lib" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </zipgroupfileset>
+    </jar>
+  </target>
+
+  <target name="clean"
+	  description="Efface tous les fichiers generes">
+     <!-- Delete directory trees -->
+     <delete dir="${build}" />
+     <delete dir="${target}"/>
+  </target>
+</project>

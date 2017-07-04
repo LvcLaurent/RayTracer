@@ -1,0 +1,7 @@
+
+Appel du Parser
+   seul : -c pour le multi thread
+          -a pour l'affichage
+
+	  -[c|a] int : pour le nombre de coeur
+
